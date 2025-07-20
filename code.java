@@ -123,6 +123,37 @@ public class PersonalTaskManagerRefactored {
 
     public static void main(String[] args) {
         PersonalTaskManagerRefactored manager = new PersonalTaskManagerRefactored();
-        manager.addNewTask("Mua sách", "Sách Công nghệ phần mềm.", "2025-07-20", "Cao");
+
+        System.out.println("\nThêm nhiệm vụ hợp lệ:");
+        manager.addNewTask(
+                "Mua sách",
+                "Sách Công nghệ phần mềm.",
+                "2025-07-20",
+                "Cao"
+        );
+
+        System.out.println("\nThêm nhiệm vụ trùng lặp (minh họa DRY - kiểm tra trùng):");
+        manager.addNewTask(
+                "Mua sách",
+                "Sách Công nghệ phần mềm.",
+                "2025-07-20",
+                "Cao"
+        );
+
+        System.out.println("\nThêm nhiệm vụ ưu tiên sai (minh họa validate):");
+        manager.addNewTask(
+                "Làm đồ án",
+                "Dự án cuối kỳ.",
+                "2025-07-22",
+                "Khẩn cấp" // Sai giá trị
+        );
+
+        System.out.println("\nThêm nhiệm vụ với tiêu đề rỗng:");
+        manager.addNewTask(
+                "",
+                "Nhiệm vụ không có tiêu đề.",
+                "2025-07-22",
+                "Thấp"
+        );
     }
 }
