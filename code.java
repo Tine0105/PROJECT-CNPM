@@ -98,6 +98,7 @@ public class PersonalTaskManagerViolations {
             }
         }
 
+        // Cần sửa đoạn này theo nguyên tắc YAGNI
         String taskId = UUID.randomUUID().toString(); // YAGNI: Có thể dùng số nguyên tăng dần đơn giản hơn.
 
         JSONObject newTask = new JSONObject();
